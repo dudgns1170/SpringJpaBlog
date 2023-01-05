@@ -1,43 +1,31 @@
 package com.yh.blog.tset;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//get/set 동시에 사용
+@Data
+//생성자 모든 페이지를 쓰는 생성자
+//빈생성자 
+@NoArgsConstructor
+//final 사용 이유는 불변성을 지키기 위해서  변경할 일이 있는 컬럼들은 final 재거해야함
+//@RequiredArgsConstructor
 public class Memeber {
-	private int id ;
-	private String username;
-	private String password;
-	private String email;
+	private  int id;
+	private  String userName;
+	private  String passwWord;
+	private  String email;
 	
-	//생성자
-	public Memeber(int id, String username, String password, String email) {
+	//생성자의 순서가 맞지 않아도 된다. 
+	@Builder
+	public Memeber(int id, String userName, String passwWord, String email) {
 		super();
 		this.id = id;
-		this.username = username;
-		this.password = password;
+		this.userName = userName;
+		this.passwWord = passwWord;
 		this.email = email;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	 
 }
