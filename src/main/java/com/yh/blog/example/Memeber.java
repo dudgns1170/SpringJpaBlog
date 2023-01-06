@@ -1,4 +1,4 @@
-package com.yh.blog.tset;
+package com.yh.blog.example;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

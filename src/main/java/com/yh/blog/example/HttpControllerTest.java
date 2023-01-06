@@ -1,4 +1,4 @@
-package com.yh.blog.tset;
+package com.yh.blog.example;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
